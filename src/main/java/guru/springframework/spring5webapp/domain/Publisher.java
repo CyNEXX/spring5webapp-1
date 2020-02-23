@@ -13,6 +13,7 @@ public class Publisher {
     private Long id;
 
     private String name;
+    private String location;
 
     @ManyToMany(mappedBy = "publishers")
     private Set<Book> books = new HashSet<>();
@@ -20,7 +21,7 @@ public class Publisher {
     public Publisher() {
     }
 
-    public Publisher(String name) {
+    public Publisher(String name, String location) {
         this.name = name;
     }
 
@@ -46,6 +47,14 @@ public class Publisher {
 
     public void setBooks(Set<Book> books) {
         this.books = books;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     @Override

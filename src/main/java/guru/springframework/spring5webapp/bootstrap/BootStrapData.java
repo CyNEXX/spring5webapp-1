@@ -32,9 +32,9 @@ public class BootStrapData implements CommandLineRunner {
         Author rod = new Author("Rod", "Johnson");
         Book noEJB = new Book("J2EE Development", "354654654");
 
-        Publisher pub_one = new Publisher("4IT");
-        Publisher pub_two = new Publisher("4Greatness");
-        Publisher pub_three = new Publisher("4Science");
+        Publisher pub_one = new Publisher("4IT", "New York");
+        Publisher pub_two = new Publisher("4Greatness", "Tokyo");
+        Publisher pub_three = new Publisher("4Science", "Bucharest");
 
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
