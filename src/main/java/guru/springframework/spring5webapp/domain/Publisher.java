@@ -15,7 +15,8 @@ public class Publisher {
     private String name;
     private String location;
 
-    @ManyToMany(mappedBy = "publishers")
+    @OneToMany
+    @JoinColumn(name = "publisher_id")
     private Set<Book> books = new HashSet<>();
 
     public Publisher() {
@@ -23,6 +24,7 @@ public class Publisher {
 
     public Publisher(String name, String location) {
         this.name = name;
+        this.location = location;
     }
 
     public Long getId() {
